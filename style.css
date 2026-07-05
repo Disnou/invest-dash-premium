@@ -213,3 +213,16 @@ html, body {
     overflow-x: hidden; /* Isso corta qualquer coisa que tente passar da borda lateral */
 }
 
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura fixa para mobile não vazar */
+    margin: 0 auto;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
