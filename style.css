@@ -166,3 +166,44 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; transition: 0.2s; }
     .header-actions { flex-direction: column; width: 100%; gap: 8px; margin-top: 16px; }
     .top-header { flex-direction: column; align-items: flex-start; }
 }
+
+/* Responsividade Mobile Otimizada */
+@media (max-width: 992px) {
+    .container { flex-direction: column; }
+    
+    .sidebar { 
+        width: 100%; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 16px; 
+        border-right: none; 
+        border-bottom: 1px solid var(--line); 
+    }
+    
+    .sidebar nav, .sidebar-footer { display: none; } /* Oculta menu lateral no mobile */
+    
+    .main-content { padding: 16px; width: 100%; overflow-x: hidden; } /* Previne overflow horizontal */
+    
+    /* Corrige o GRID dos KPIs para ficarem empilhados ou em dupla */
+    .kpi-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; /* 2 colunas no celular */
+        gap: 12px; 
+    }
+    
+    .hero-card { grid-column: span 2; } /* Card principal ocupa a largura toda */
+    
+    .analytics-grid, .bottom-grid { 
+        grid-template-columns: 1fr; 
+        gap: 16px; 
+    }
+
+    .kpi-value { font-size: 32px; } /* Texto menor para não quebrar */
+    
+    .header-actions { flex-direction: column; width: 100%; gap: 8px; margin-top: 16px; }
+    .top-header { flex-direction: column; align-items: flex-start; }
+    
+    /* Previne que textos longos vazem a tela */
+    .card, .modal-content { word-break: break-word; }
+}
