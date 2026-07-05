@@ -207,3 +207,9 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; transition: 0.2s; }
     /* Previne que textos longos vazem a tela */
     .card, .modal-content { word-break: break-word; }
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Isso corta qualquer coisa que tente passar da borda lateral */
+}
+
